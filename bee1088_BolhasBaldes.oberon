@@ -1,7 +1,7 @@
 MODULE bee1088BolhasBaldes;
 
 VAR
-    m: ARRAY 6 OF INTEGER ;
+    m: ARRAY 6 OF INTEGER;
     N: INTEGER;
     count: INTEGER;
     test_r: STRING;
@@ -12,18 +12,20 @@ PROCEDURE BubbleSort(VAR P:ARRAY 6 OF INTEGER, N:INTEGER,VAR inversions: INTEGER
         swapped: BOOLEAN;
     BEGIN
         inversions := 0;
-        
-        FOR i := 0 TO N - 2 DO
+        i := 0;
+        WHILE (i < N - 1) DO
             swapped := FALSE;
-            FOR j := 0 TO N - i - 2 DO
+            WHILE (j < N - i - 1) DO
                 IF P[j] > P[j+1] THEN
                     temp := P[j];
                     P[j] := P[j+1];
                     P[j+1] := temp;
                     
                     inversions := inversions + 1;
-                    swapped := TRUE
-                END
+                    swapped := TRUE;
+                    j := j + 1
+                END;
+            i := i + 1   
             END;
             IF ~swapped THEN
                 EXIT
@@ -44,9 +46,9 @@ BEGIN
     BubbleSort(m, 6, count);
 
     IF count MOD 2 = 0 THEN
-        test_r := "Carlos";
+        test_r := "Carlos"
     ELSE
-        test_r := "Marcelo";
-    END;
+        test_r := "Marcelo"
+    END
 END
 END bee1088BolhasBaldes.
