@@ -66,4 +66,16 @@ class InterpreterVisitorTest extends AnyFunSuite {
     assert(evalArraySubscript("r", 2) == IntValue(3))
 
   }
+  
+      test("Testing bee1088BolhasBaldes") {
+    val module = ScalaParser.parseResource("stmts/bee1088_BolhasBaldes.oberon")
+    val interpreter = new Interpreter()
+    assert(module.name == "bee1088BolhasBaldes")
+
+    interpreter.setTestEnvironment()
+    val result = interpreter.run(module)
+
+    assert(result.lookup("test_r").isDefined)
+    assert(result.lookup("test_r") == Some("Carlos"))
+  }
 }
