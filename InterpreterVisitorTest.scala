@@ -78,4 +78,24 @@ class InterpreterVisitorTest extends AnyFunSuite {
     assert(result.lookup("test_r").isDefined)
     assert(result.lookup("test_r") == Some("Carlos"))
   }
+    test("Testing bee1279") {
+    val module = ScalaParser.parseResource("stmts/bee1279.oberon")
+    val interpreter = new Interpreter()
+    assert(module.name == "bee1279")
+
+    interpreter.setTestEnvironment()
+    val result = interpreter.run(module)
+
+    assert(result.lookup("saida1").isDefined)
+    assert(result.lookup("saida1") == Some(StringValue("Este e um ano bissexto.")))
+
+    assert(result.lookup("saida2").isDefined)
+    assert(result.lookup("saida2") == Some(StringValue("Este e um ano bissexto e de festival huluculu.")))
+
+    assert(result.lookup("saida3").isDefined)
+    assert(result.lookup("saida3") == Some(StringValue("Este e um ano de festival huluculu.")))
+
+    assert(result.lookup("saida4").isDefined)
+    assert(result.lookup("saida4") == Some(StringValue("Este e um ano comum.")))
+  }
 }
