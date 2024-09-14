@@ -8,7 +8,7 @@ MODULE bee1088BolhasBaldes;
         len: INTEGER;
         count: INTEGER;
         inv: INTEGER;
-        result: STRING;
+        res: STRING;
 
     PROCEDURE BubbleSort(lista: intArray, N: INTEGER, inversions: INTEGER) : INTEGER;
         VAR
@@ -18,17 +18,18 @@ MODULE bee1088BolhasBaldes;
             j := 0;
             inversions := 0;
             
-            WHILE (i < N - 1) DO
+            WHILE (i < (N - 1)) DO
                 i := i + 1;
-                WHILE (j < N - i - 1) DO
+                WHILE (j < ((N - i) - 1)) DO
                     IF (lista[j] > lista[j+1]) THEN
                         temp := lista[j];
                         lista[j] := lista[j+1];
                         lista[j+1] := temp;
-                        inversions := inversions + 1;
-                        j := j + 1
-                    END
-                END
+                        inversions := inversions + 1
+                    END;
+                    j := j + 1
+                END;
+            j := 0
             END;
             RETURN inversions
         END BubbleSort   
@@ -48,9 +49,9 @@ MODULE bee1088BolhasBaldes;
         count := BubbleSort(entrada, len, inv);
 
         IF ((count MOD 2) = 0) THEN
-            result := "Carlos"
+            res := "Carlos"
         ELSE
-            result := "Marcelo"
+            res := "Marcelo"
         END
     END
 END bee1088BolhasBaldes.
