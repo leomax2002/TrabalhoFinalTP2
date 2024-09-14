@@ -1,7 +1,7 @@
 MODULE bee1088BolhasBaldes;
 
     TYPE
-        intArray = ARRAY 6 OF INTEGER;
+        intArray := ARRAY 6 OF INTEGER;
 
     VAR
         entrada: intArray;
@@ -10,7 +10,7 @@ MODULE bee1088BolhasBaldes;
         inv: INTEGER;
         result: STRING;
 
-    PROCEDURE BubbleSort(lista: intArray; N: INTEGER; inversions: INTEGER) : INTEGER;
+    PROCEDURE BubbleSort(lista: intArray, N: INTEGER, inversions: INTEGER) : INTEGER;
         VAR
             i, j, temp: INTEGER;
         BEGIN
