@@ -1,7 +1,7 @@
 MODULE bee1088BolhasBaldes;
 
     TYPE
-        intArray := ARRAY 6 OF INTEGER;
+        intArray = ARRAY 6 OF INTEGER
 
     VAR
         entrada: intArray;
