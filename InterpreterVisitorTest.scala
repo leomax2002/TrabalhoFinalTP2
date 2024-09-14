@@ -52,14 +52,14 @@ class InterpreterVisitorTest extends AnyFunSuite {
   }
 
   test("Testing interpreter on bee1161_SomadeFatoriais2 program") {
-    val module = parseResource("challenges/bee1161_SomadeFatoriais2.oberon")
+    val module = ScalaParser.parseResource("stmts/bee1161_SomadeFatoriais2.oberon")
 
     
-    val coreModule = CoreTransformer.reduceOberonModule(module)
+    val interpreter = new Interpreter()
 
-    assert(coreModule.name == "bee1161SomadeFatoriais2")
+    assert(module.name == "bee1161SomadeFatoriais2")
 
-    val result = interpreter.run(coreModule)
+    val result = interpreter.run(module)
 
     assert(result.lookup("res") == Some(IntValue(48)))
     assert(result.lookup("res2") == Some(IntValue(2)))
