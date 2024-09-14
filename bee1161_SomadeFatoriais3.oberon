@@ -5,7 +5,7 @@ VAR
     n : ARRAY 3 OF INTEGER;
     r : ARRAY 3 OF INTEGER;
     i : INTEGER;
-    s : INTEGER;
+    v : INTEGER;
     res : INTEGER;
 
 
@@ -29,9 +29,9 @@ BEGIN
 
     i := 0;
     res := 0;
-    FOREACH s IN r
-      r[i] := fatorial(m[i]) + fatorial(n[i]);
-      res := res + r[i];
+    FOREACH v IN r
+      v := fatorial(m[i]) + fatorial(n[i]);
+      res := res + v;
       INC(i)
     END;
 
