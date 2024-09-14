@@ -91,8 +91,8 @@ class InterpreterVisitorTest extends AnyFunSuite {
     interpreter.setTestEnvironment()
     val result = interpreter.run(module)
 
-    assert(result.lookup("test_r").isDefined)
-    assert(result.lookup("test_r") == Some("Carlos"))
+    assert(result.lookup("res").isDefined)
+    assert(result.lookup("res") == Some("Marcelo"))
   }
     test("Testing bee1279") {
     val module = ScalaParser.parseResource("stmts/bee1279.oberon")
