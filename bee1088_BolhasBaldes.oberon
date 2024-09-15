@@ -1,7 +1,7 @@
 MODULE bee1088BolhasBaldes;
 
     TYPE
-        intArray = ARRAY 6 OF INTEGER
+        intArray = ARRAY 5 OF INTEGER
 
     VAR
         entrada: intArray;
@@ -35,14 +35,13 @@ MODULE bee1088BolhasBaldes;
         END BubbleSort   
 
     BEGIN
-        entrada[0] := 5;
-        entrada[1] := 1;
-        entrada[2] := 5;
-        entrada[3] := 3;
-        entrada[4] := 4;
-        entrada[5] := 2;
+        entrada[0] := 1;
+        entrada[1] := 5;
+        entrada[2] := 3;
+        entrada[3] := 4;
+        entrada[4] := 2;
 
-        len := 6;
+        len := 5;
 
         inv := 0;
 
