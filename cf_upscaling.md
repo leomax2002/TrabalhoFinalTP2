@@ -11,7 +11,7 @@
 
 <b>Problema:</b> You are given an integer n. Output a 2n×2n checkerboard made of 2×2 squares alternating '#' and '.', with the top-left cell being '#'.
 
-[checkerboard](https://espresso.codeforces.com/51f8f6d3cb1f2f2902c6a38cfb4b9719aa0d5eca.png)
+<img src="https://espresso.codeforces.com/51f8f6d3cb1f2f2902c6a38cfb4b9719aa0d5eca.png" alt="checkerboard">
 
 <table>
 <thead>
@@ -29,12 +29,19 @@
 <td>
 <p>
 ##..##..
+	
 ##..##..
+
 ..##..##
+
 ..##..##
+
 ##..##..
+
 ##..##..
+
 ..##..##
+
 ..##..##
 </p>
 </td>
